@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python3.6
 
 '''Get PyPi Download Stats
 
@@ -54,7 +54,7 @@ def sigint_handler(signum, frame):
 
 def parse_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument('packages', type=str, nargs='*', help='Space separated list of packages to query')
+    parser.add_argument('packages', type=str, nargs='+', help='Space separated list of packages to query')
     parser.add_argument('-w', '--webhook_url', metavar='', type=str, help='Webhook URL')
     return parser.parse_args()
 
